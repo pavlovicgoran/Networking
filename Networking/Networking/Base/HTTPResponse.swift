@@ -11,6 +11,12 @@ public struct HTTPResponse {
     public let request: HTTPRequest
     private let response: HTTPURLResponse
     public let body: Data?
+    
+    init(request: HTTPRequest, response: HTTPURLResponse, body: Data?) {
+        self.request = request
+        self.response = response
+        self.body = body
+    }
 }
 
 public extension HTTPResponse {

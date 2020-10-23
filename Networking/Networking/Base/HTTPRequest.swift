@@ -37,4 +37,8 @@ public extension HTTPRequest {
         get { urlComponents.path }
         set { urlComponents.path = newValue }
     }
+    
+    var url: URL? {
+        urlComponents.url
+    }
 }

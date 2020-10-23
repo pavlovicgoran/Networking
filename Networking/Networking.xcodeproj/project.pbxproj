@@ -14,6 +14,8 @@
 		5F0E939E253CC1520086E45F /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E939D253CC1520086E45F /* HTTPStatus.swift */; };
 		5F0E93A1253CC2C80086E45F /* HTTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93A0253CC2C80086E45F /* HTTPResult.swift */; };
 		5F0E93A4253CC4CC0086E45F /* HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93A3253CC4CC0086E45F /* HTTPBody.swift */; };
+		5F0E93AC254298D10086E45F /* HTTPLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93AB254298D10086E45F /* HTTPLoading.swift */; };
+		5F0E93B025429A1A0086E45F /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93AF25429A1A0086E45F /* URLSessionExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		5F0E939D253CC1520086E45F /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
 		5F0E93A0253CC2C80086E45F /* HTTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResult.swift; sourceTree = "<group>"; };
 		5F0E93A3253CC4CC0086E45F /* HTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBody.swift; sourceTree = "<group>"; };
+		5F0E93AB254298D10086E45F /* HTTPLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLoading.swift; sourceTree = "<group>"; };
+		5F0E93AF25429A1A0086E45F /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		5F0E9386253CB59F0086E45F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				5F0E93AE254299BF0086E45F /* SendingRequests */,
 				5F0E9393253CB8DD0086E45F /* Base */,
 				5F0E9387253CB59F0086E45F /* Networking.h */,
 				5F0E9388253CB59F0086E45F /* Info.plist */,
@@ -76,6 +81,15 @@
 				5F0E93A3253CC4CC0086E45F /* HTTPBody.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		5F0E93AE254299BF0086E45F /* SendingRequests */ = {
+			isa = PBXGroup;
+			children = (
+				5F0E93AB254298D10086E45F /* HTTPLoading.swift */,
+				5F0E93AF25429A1A0086E45F /* URLSessionExtension.swift */,
+			);
+			path = SendingRequests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0E93B025429A1A0086E45F /* URLSessionExtension.swift in Sources */,
 				5F0E939B253CC0A10086E45F /* HTTPResponse.swift in Sources */,
 				5F0E93A1253CC2C80086E45F /* HTTPResult.swift in Sources */,
+				5F0E93AC254298D10086E45F /* HTTPLoading.swift in Sources */,
 				5F0E9395253CB9010086E45F /* HTTPMethod.swift in Sources */,
 				5F0E93A4253CC4CC0086E45F /* HTTPBody.swift in Sources */,
 				5F0E9398253CBB8C0086E45F /* HTTPRequest.swift in Sources */,
