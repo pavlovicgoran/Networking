@@ -14,12 +14,15 @@
 		5F0E939E253CC1520086E45F /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E939D253CC1520086E45F /* HTTPStatus.swift */; };
 		5F0E93A1253CC2C80086E45F /* HTTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93A0253CC2C80086E45F /* HTTPResult.swift */; };
 		5F0E93A4253CC4CC0086E45F /* HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93A3253CC4CC0086E45F /* HTTPBody.swift */; };
-		5F0E93AC254298D10086E45F /* HTTPLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93AB254298D10086E45F /* HTTPLoading.swift */; };
-		5F0E93B025429A1A0086E45F /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93AF25429A1A0086E45F /* URLSessionExtension.swift */; };
+		5F0E93AC254298D10086E45F /* HTTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93AB254298D10086E45F /* HTTPLoader.swift */; };
+		5F0E93B025429A1A0086E45F /* URLSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93AF25429A1A0086E45F /* URLSessionLoader.swift */; };
 		5F0E93BC2542AC6D0086E45F /* StarWarsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93BB2542AC6D0086E45F /* StarWarsAPITests.swift */; };
 		5F0E93BE2542AC6D0086E45F /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0E9384253CB59F0086E45F /* Networking.framework */; };
 		5F0E93C72542ACAE0086E45F /* MockLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93C62542ACAE0086E45F /* MockLoader.swift */; };
 		5F6F5D232544426A00FF9D03 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */; };
+		5F6F5D31254471D600FF9D03 /* PrintLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D30254471D600FF9D03 /* PrintLoader.swift */; };
+		5F6F5D37254472C500FF9D03 /* LoaderOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D36254472C500FF9D03 /* LoaderOperator.swift */; };
+		5F6F5D3B2544740C00FF9D03 /* LoaderChainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +45,16 @@
 		5F0E939D253CC1520086E45F /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
 		5F0E93A0253CC2C80086E45F /* HTTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResult.swift; sourceTree = "<group>"; };
 		5F0E93A3253CC4CC0086E45F /* HTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBody.swift; sourceTree = "<group>"; };
-		5F0E93AB254298D10086E45F /* HTTPLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLoading.swift; sourceTree = "<group>"; };
-		5F0E93AF25429A1A0086E45F /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		5F0E93AB254298D10086E45F /* HTTPLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLoader.swift; sourceTree = "<group>"; };
+		5F0E93AF25429A1A0086E45F /* URLSessionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionLoader.swift; sourceTree = "<group>"; };
 		5F0E93B92542AC6D0086E45F /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0E93BB2542AC6D0086E45F /* StarWarsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPITests.swift; sourceTree = "<group>"; };
 		5F0E93BD2542AC6D0086E45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F0E93C62542ACAE0086E45F /* MockLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoader.swift; sourceTree = "<group>"; };
 		5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
+		5F6F5D30254471D600FF9D03 /* PrintLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintLoader.swift; sourceTree = "<group>"; };
+		5F6F5D36254472C500FF9D03 /* LoaderOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderOperator.swift; sourceTree = "<group>"; };
+		5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderChainingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +97,7 @@
 		5F0E9386253CB59F0086E45F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				5F0E93AE254299BF0086E45F /* SendingRequests */,
+				5F0E93AE254299BF0086E45F /* Loader Protocol */,
 				5F0E9393253CB8DD0086E45F /* Base */,
 				5F0E9387253CB59F0086E45F /* Networking.h */,
 				5F0E9388253CB59F0086E45F /* Info.plist */,
@@ -112,13 +118,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		5F0E93AE254299BF0086E45F /* SendingRequests */ = {
+		5F0E93AE254299BF0086E45F /* Loader Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				5F0E93AB254298D10086E45F /* HTTPLoading.swift */,
-				5F0E93AF25429A1A0086E45F /* URLSessionExtension.swift */,
+				5F0E93AB254298D10086E45F /* HTTPLoader.swift */,
+				5F0E93AF25429A1A0086E45F /* URLSessionLoader.swift */,
+				5F6F5D30254471D600FF9D03 /* PrintLoader.swift */,
+				5F6F5D36254472C500FF9D03 /* LoaderOperator.swift */,
 			);
-			path = SendingRequests;
+			path = "Loader Protocol";
 			sourceTree = "<group>";
 		};
 		5F0E93BA2542AC6D0086E45F /* NetworkingTests */ = {
@@ -128,6 +136,7 @@
 				5F0E93BD2542AC6D0086E45F /* Info.plist */,
 				5F0E93C62542ACAE0086E45F /* MockLoader.swift */,
 				5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */,
+				5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */,
 			);
 			path = NetworkingTests;
 			sourceTree = "<group>";
@@ -241,13 +250,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F0E93B025429A1A0086E45F /* URLSessionExtension.swift in Sources */,
+				5F6F5D37254472C500FF9D03 /* LoaderOperator.swift in Sources */,
+				5F0E93B025429A1A0086E45F /* URLSessionLoader.swift in Sources */,
 				5F0E939B253CC0A10086E45F /* HTTPResponse.swift in Sources */,
 				5F0E93A1253CC2C80086E45F /* HTTPResult.swift in Sources */,
-				5F0E93AC254298D10086E45F /* HTTPLoading.swift in Sources */,
+				5F0E93AC254298D10086E45F /* HTTPLoader.swift in Sources */,
 				5F0E9395253CB9010086E45F /* HTTPMethod.swift in Sources */,
 				5F0E93A4253CC4CC0086E45F /* HTTPBody.swift in Sources */,
 				5F0E9398253CBB8C0086E45F /* HTTPRequest.swift in Sources */,
+				5F6F5D31254471D600FF9D03 /* PrintLoader.swift in Sources */,
 				5F0E939E253CC1520086E45F /* HTTPStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +270,7 @@
 				5F6F5D232544426A00FF9D03 /* StarWarsAPI.swift in Sources */,
 				5F0E93C72542ACAE0086E45F /* MockLoader.swift in Sources */,
 				5F0E93BC2542AC6D0086E45F /* StarWarsAPITests.swift in Sources */,
+				5F6F5D3B2544740C00FF9D03 /* LoaderChainingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

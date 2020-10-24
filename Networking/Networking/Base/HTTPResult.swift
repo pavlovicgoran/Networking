@@ -38,7 +38,7 @@ public struct HTTPError: Error {
         case unknown            // we have no idea what the problem is
     }
     
-    public init(code: Code, request: HTTPRequest, response: HTTPResponse?, underlyingError: Error? = nil) {
+    public init(code: Code, request: HTTPRequest, response: HTTPResponse? = nil, underlyingError: Error? = nil) {
         self.code = code
         self.request = request
         self.response = response

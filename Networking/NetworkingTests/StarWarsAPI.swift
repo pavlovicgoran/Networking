@@ -13,9 +13,9 @@ public class StarWarsAPI {
         static let host = "swapi.dev"
         static let peoplePath = "/api/people"
     }
-    private let loader: HTTPLoading
+    private let loader: HTTPLoader
     
-    init(loader: HTTPLoading) {
+    init(loader: HTTPLoader) {
         self.loader = loader
     }
     
