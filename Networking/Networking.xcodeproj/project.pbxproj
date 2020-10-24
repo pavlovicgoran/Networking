@@ -24,6 +24,8 @@
 		5F6F5D37254472C500FF9D03 /* LoaderOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D36254472C500FF9D03 /* LoaderOperator.swift */; };
 		5F6F5D3B2544740C00FF9D03 /* LoaderChainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */; };
 		5F6F5D462544802F00FF9D03 /* ModifyRequestLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D452544802F00FF9D03 /* ModifyRequestLoader.swift */; };
+		5F6F5D4E25448F8900FF9D03 /* ServerEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D4D25448F8900FF9D03 /* ServerEnvironment.swift */; };
+		5F6F5D522544910000FF9D03 /* EnvironmentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D512544910000FF9D03 /* EnvironmentLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		5F6F5D36254472C500FF9D03 /* LoaderOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderOperator.swift; sourceTree = "<group>"; };
 		5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderChainingTests.swift; sourceTree = "<group>"; };
 		5F6F5D452544802F00FF9D03 /* ModifyRequestLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRequestLoader.swift; sourceTree = "<group>"; };
+		5F6F5D4D25448F8900FF9D03 /* ServerEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEnvironment.swift; sourceTree = "<group>"; };
+		5F6F5D512544910000FF9D03 /* EnvironmentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 				5F0E939D253CC1520086E45F /* HTTPStatus.swift */,
 				5F0E93A0253CC2C80086E45F /* HTTPResult.swift */,
 				5F0E93A3253CC4CC0086E45F /* HTTPBody.swift */,
+				5F6F5D4D25448F8900FF9D03 /* ServerEnvironment.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 				5F0E93AF25429A1A0086E45F /* URLSessionLoader.swift */,
 				5F6F5D30254471D600FF9D03 /* PrintLoader.swift */,
 				5F6F5D452544802F00FF9D03 /* ModifyRequestLoader.swift */,
+				5F6F5D512544910000FF9D03 /* EnvironmentLoader.swift */,
 			);
 			path = "Concrete Loaders";
 			sourceTree = "<group>";
@@ -261,8 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F6F5D522544910000FF9D03 /* EnvironmentLoader.swift in Sources */,
 				5F6F5D37254472C500FF9D03 /* LoaderOperator.swift in Sources */,
 				5F0E93B025429A1A0086E45F /* URLSessionLoader.swift in Sources */,
+				5F6F5D4E25448F8900FF9D03 /* ServerEnvironment.swift in Sources */,
 				5F0E939B253CC0A10086E45F /* HTTPResponse.swift in Sources */,
 				5F0E93A1253CC2C80086E45F /* HTTPResult.swift in Sources */,
 				5F0E93AC254298D10086E45F /* HTTPLoader.swift in Sources */,
