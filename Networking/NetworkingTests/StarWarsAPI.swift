@@ -11,18 +11,28 @@ import Foundation
 public class StarWarsAPI {
     enum Constants {
         static let host = "swapi.dev"
-        static let peoplePath = "/api/people"
+        static let apiPath = "/api/"
     }
     private let loader: HTTPLoader
     
     init(loader: HTTPLoader) {
-        self.loader = loader
+        let modifier = ModifyRequestLoader { request in
+            var requestCopy = request
+            if requestCopy.host?.isEmpty ?? true {
+                requestCopy.host = Constants.host
+            }
+            if !requestCopy.path.hasPrefix("/") {
+                requestCopy.path = Constants.apiPath + requestCopy.path
+            }
+            return requestCopy
+        }
+        
+        self.loader = modifier --> loader ?? loader
     }
     
     public func requestPeople(completion: @escaping (Result<Character, HTTPError>) -> Void) {
         var request = HTTPRequest()
-        request.host = Constants.host
-        request.path = Constants.peoplePath
+        request.host = "people"
         
         loader.load(request: request) { result in
             switch result {
