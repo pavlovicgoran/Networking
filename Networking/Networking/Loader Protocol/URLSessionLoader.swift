@@ -1,5 +1,5 @@
 //
-//  URLSessionExtension.swift
+//  URLSessionLoader.swift
 //  Networking
 //
 //  Created by Goran Pavlovic on 23/10/2020.
@@ -7,15 +7,20 @@
 
 import Foundation
 
-extension URLSession: HTTPLoading {
+public class URLSessionLoader: HTTPLoader {
+    private let session: URLSession
+    
+    public init(session: URLSession = URLSession.shared) {
+        self.session = session
+    }
+    
     #warning("Figure out a way to support canceling tasks")
-    public func load(request: HTTPRequest, completion: @escaping (HTTPResult) -> Void) {
+    public override func load(request: HTTPRequest, completion: @escaping (HTTPResult) -> Void) {
         // Try to construct the url
         guard let url = request.url else {
             let error = HTTPError(
                 code: .couldntBuildUrl,
-                request: request,
-                response: nil
+                request: request
             )
             completion(.failure(error))
             return
@@ -43,15 +48,14 @@ extension URLSession: HTTPLoading {
             } catch {
                 let httpError = HTTPError(
                     code: .invalidBodySerialization,
-                    request: request,
-                    response: nil
+                    request: request
                 )
                 completion(.failure(httpError))
                 return
             }
         }
         
-        let dataTask = self.dataTask(with: urlRequest) { (data, response, error) in
+        let dataTask = session.dataTask(with: urlRequest) { (data, response, error) in
             // parse response into the HTTPResult
             let result = HTTPResult(request: request, responseData: data, response: response, error: error)
             completion(result)
@@ -90,7 +94,7 @@ extension HTTPResult {
 
         } else {
             // not an error, but also not an HTTPURLResponse
-            self = .failure(HTTPError(code: .invalidResponse, request: request, response: nil, underlyingError: error))
+            self = .failure(HTTPError(code: .invalidResponse, request: request, underlyingError: error))
         }
     }
 }

@@ -8,13 +8,13 @@
 import Foundation
 @testable import Networking
 
-public class MockLoader: HTTPLoading {
+public class MockLoader: HTTPLoader {
     public typealias HTTPHandler = (HTTPResult) -> Void
     public typealias MockHandler = (HTTPRequest, HTTPHandler) -> Void
     
     private var nextHandlers = [MockHandler]()
     
-    public func load(request: HTTPRequest, completion: @escaping HTTPHandler) {
+    public override func load(request: HTTPRequest, completion: @escaping HTTPHandler) {
         if nextHandlers.isEmpty == false {
             let next = nextHandlers.removeFirst()
             next(request, completion)
