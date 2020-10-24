@@ -23,6 +23,7 @@
 		5F6F5D31254471D600FF9D03 /* PrintLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D30254471D600FF9D03 /* PrintLoader.swift */; };
 		5F6F5D37254472C500FF9D03 /* LoaderOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D36254472C500FF9D03 /* LoaderOperator.swift */; };
 		5F6F5D3B2544740C00FF9D03 /* LoaderChainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */; };
+		5F6F5D462544802F00FF9D03 /* ModifyRequestLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D452544802F00FF9D03 /* ModifyRequestLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		5F6F5D30254471D600FF9D03 /* PrintLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintLoader.swift; sourceTree = "<group>"; };
 		5F6F5D36254472C500FF9D03 /* LoaderOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderOperator.swift; sourceTree = "<group>"; };
 		5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderChainingTests.swift; sourceTree = "<group>"; };
+		5F6F5D452544802F00FF9D03 /* ModifyRequestLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRequestLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		5F0E9386253CB59F0086E45F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				5F6F5D4225447FB400FF9D03 /* Concrete Loaders */,
 				5F0E93AE254299BF0086E45F /* Loader Protocol */,
 				5F0E9393253CB8DD0086E45F /* Base */,
 				5F0E9387253CB59F0086E45F /* Networking.h */,
@@ -122,8 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				5F0E93AB254298D10086E45F /* HTTPLoader.swift */,
-				5F0E93AF25429A1A0086E45F /* URLSessionLoader.swift */,
-				5F6F5D30254471D600FF9D03 /* PrintLoader.swift */,
 				5F6F5D36254472C500FF9D03 /* LoaderOperator.swift */,
 			);
 			path = "Loader Protocol";
@@ -139,6 +140,16 @@
 				5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */,
 			);
 			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		5F6F5D4225447FB400FF9D03 /* Concrete Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				5F0E93AF25429A1A0086E45F /* URLSessionLoader.swift */,
+				5F6F5D30254471D600FF9D03 /* PrintLoader.swift */,
+				5F6F5D452544802F00FF9D03 /* ModifyRequestLoader.swift */,
+			);
+			path = "Concrete Loaders";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 				5F0E93A1253CC2C80086E45F /* HTTPResult.swift in Sources */,
 				5F0E93AC254298D10086E45F /* HTTPLoader.swift in Sources */,
 				5F0E9395253CB9010086E45F /* HTTPMethod.swift in Sources */,
+				5F6F5D462544802F00FF9D03 /* ModifyRequestLoader.swift in Sources */,
 				5F0E93A4253CC4CC0086E45F /* HTTPBody.swift in Sources */,
 				5F0E9398253CBB8C0086E45F /* HTTPRequest.swift in Sources */,
 				5F6F5D31254471D600FF9D03 /* PrintLoader.swift in Sources */,

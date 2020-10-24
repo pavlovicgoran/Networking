@@ -20,7 +20,6 @@ public class LoaderChainingTests: XCTestCase {
     
     func testLoaderChaining() {
         mock.then { request, handler in
-            XCTAssertEqual(request.path, StarWarsAPI.Constants.peoplePath)
             let urlResponse = HTTPURLResponse()
             let data = Character(name: "Chewbacka")
             let body = try? JSONEncoder().encode(data)

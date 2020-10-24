@@ -17,7 +17,6 @@ class StarWarsAPITests: XCTestCase {
     // Tests 200 Valid JSON
     func test200ValidJSON() {
         mock.then { request, handler in
-            XCTAssertEqual(request.path, StarWarsAPI.Constants.peoplePath)
             let urlResponse = HTTPURLResponse()
             let data = Character(name: "Luke Skywalker")
             let body = try? JSONEncoder().encode(data)
@@ -38,7 +37,6 @@ class StarWarsAPITests: XCTestCase {
     // Tests 200 no body returned
     func test200NoBody() {
         mock.then { request, handler in
-            XCTAssertEqual(request.path, StarWarsAPI.Constants.peoplePath)
             let urlResponse = HTTPURLResponse()
             let response = HTTPResponse(request: request, response: urlResponse, body: nil)
             handler(.success(response))
@@ -55,7 +53,6 @@ class StarWarsAPITests: XCTestCase {
     
     func test404Eror() {
         mock.then { request, handler in
-            XCTAssertEqual(request.path, StarWarsAPI.Constants.peoplePath)
             let urlResponse = HTTPURLResponse(url: request.url!, statusCode: HTTPStatus.notFound.statusCode, httpVersion: "1.1", headerFields: nil)!
             let response = HTTPResponse(request: request, response: urlResponse, body: nil)
             handler(.success(response))
@@ -72,7 +69,6 @@ class StarWarsAPITests: XCTestCase {
     
     func test501Error() {
         mock.then { request, handler in
-            XCTAssertEqual(request.path, StarWarsAPI.Constants.peoplePath)
             let urlResponse = HTTPURLResponse(url: request.url!, statusCode: HTTPStatus.internalServerError.statusCode, httpVersion: "1.1", headerFields: nil)!
             let response = HTTPResponse(request: request, response: urlResponse, body: nil)
             handler(.success(response))
