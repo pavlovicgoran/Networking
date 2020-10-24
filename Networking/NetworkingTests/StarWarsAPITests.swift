@@ -82,4 +82,17 @@ class StarWarsAPITests: XCTestCase {
             }
         }
     }
+    
+    func testProductionEnvironment() {
+        mock.then { request, handler in
+            XCTAssertEqual(request.host, StarWarsAPI.Constants.host)
+            XCTAssertTrue(request.path.hasPrefix(StarWarsAPI.Constants.apiPrefix))
+            
+            let urlResponse = HTTPURLResponse(url: request.url!, statusCode: HTTPStatus.internalServerError.statusCode, httpVersion: "1.1", headerFields: nil)!
+            let response = HTTPResponse(request: request, response: urlResponse, body: Data())
+            handler(.success(response))
+        }
+        
+        api.requestPeople { _ in }
+    }
 }

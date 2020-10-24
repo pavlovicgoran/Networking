@@ -8,31 +8,26 @@
 import Foundation
 @testable import Networking
 
+extension ServerEnvironment {
+    static let production = ServerEnvironment(host: StarWarsAPI.Constants.host, pathPrefix: StarWarsAPI.Constants.apiPrefix)
+}
+
 public class StarWarsAPI {
     enum Constants {
         static let host = "swapi.dev"
-        static let apiPath = "/api/"
+        static let apiPrefix = "/api"
     }
     private let loader: HTTPLoader
     
     init(loader: HTTPLoader) {
-        let modifier = ModifyRequestLoader { request in
-            var requestCopy = request
-            if requestCopy.host?.isEmpty ?? true {
-                requestCopy.host = Constants.host
-            }
-            if !requestCopy.path.hasPrefix("/") {
-                requestCopy.path = Constants.apiPath + requestCopy.path
-            }
-            return requestCopy
-        }
+        let productionLoader = EnvironmentLoader(environment: .production)
         
-        self.loader = modifier --> loader ?? loader
+        self.loader = productionLoader --> loader ?? loader
     }
     
     public func requestPeople(completion: @escaping (Result<Character, HTTPError>) -> Void) {
         var request = HTTPRequest()
-        request.host = "people"
+        request.path = "people"
         
         loader.load(request: request) { result in
             switch result {
