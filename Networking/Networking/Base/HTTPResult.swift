@@ -30,7 +30,19 @@ public struct HTTPError: Error {
         case invalidResponse    // the system did not receive a valid HTTP response
         case couldntBuildUrl    // the url couldn't be constructed
         case invalidBodySerialization   // the HTTPBody couldn't be serialized
+        case invalidBodyDeserialization // ther data of the HTTPResponse couldn't be deserialized
+        case noData             // no data is returned
+        case badRequest         // api returned 400
+        case notFound           // api returned 404
+        case internalServerError    // api returned 500
         case unknown            // we have no idea what the problem is
+    }
+    
+    public init(code: Code, request: HTTPRequest, response: HTTPResponse?, underlyingError: Error? = nil) {
+        self.code = code
+        self.request = request
+        self.response = response
+        self.underlyingError = underlyingError
     }
 }
 
