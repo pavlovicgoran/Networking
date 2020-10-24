@@ -16,7 +16,21 @@
 		5F0E93A4253CC4CC0086E45F /* HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93A3253CC4CC0086E45F /* HTTPBody.swift */; };
 		5F0E93AC254298D10086E45F /* HTTPLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93AB254298D10086E45F /* HTTPLoading.swift */; };
 		5F0E93B025429A1A0086E45F /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93AF25429A1A0086E45F /* URLSessionExtension.swift */; };
+		5F0E93BC2542AC6D0086E45F /* StarWarsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93BB2542AC6D0086E45F /* StarWarsAPITests.swift */; };
+		5F0E93BE2542AC6D0086E45F /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0E9384253CB59F0086E45F /* Networking.framework */; };
+		5F0E93C72542ACAE0086E45F /* MockLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93C62542ACAE0086E45F /* MockLoader.swift */; };
+		5F6F5D232544426A00FF9D03 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F0E93BF2542AC6D0086E45F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F0E937B253CB59F0086E45F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F0E9383253CB59F0086E45F;
+			remoteInfo = Networking;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5F0E9384253CB59F0086E45F /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +44,11 @@
 		5F0E93A3253CC4CC0086E45F /* HTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBody.swift; sourceTree = "<group>"; };
 		5F0E93AB254298D10086E45F /* HTTPLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLoading.swift; sourceTree = "<group>"; };
 		5F0E93AF25429A1A0086E45F /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		5F0E93B92542AC6D0086E45F /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F0E93BB2542AC6D0086E45F /* StarWarsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPITests.swift; sourceTree = "<group>"; };
+		5F0E93BD2542AC6D0086E45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F0E93C62542ACAE0086E45F /* MockLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoader.swift; sourceTree = "<group>"; };
+		5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +59,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F0E93B62542AC6D0086E45F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F0E93BE2542AC6D0086E45F /* Networking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -47,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				5F0E9386253CB59F0086E45F /* Networking */,
+				5F0E93BA2542AC6D0086E45F /* NetworkingTests */,
 				5F0E9385253CB59F0086E45F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				5F0E9384253CB59F0086E45F /* Networking.framework */,
+				5F0E93B92542AC6D0086E45F /* NetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +121,17 @@
 			path = SendingRequests;
 			sourceTree = "<group>";
 		};
+		5F0E93BA2542AC6D0086E45F /* NetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F0E93BB2542AC6D0086E45F /* StarWarsAPITests.swift */,
+				5F0E93BD2542AC6D0086E45F /* Info.plist */,
+				5F0E93C62542ACAE0086E45F /* MockLoader.swift */,
+				5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */,
+			);
+			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -124,17 +164,39 @@
 			productReference = 5F0E9384253CB59F0086E45F /* Networking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		5F0E93B82542AC6D0086E45F /* NetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F0E93C32542AC6D0086E45F /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
+			buildPhases = (
+				5F0E93B52542AC6D0086E45F /* Sources */,
+				5F0E93B62542AC6D0086E45F /* Frameworks */,
+				5F0E93B72542AC6D0086E45F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F0E93C02542AC6D0086E45F /* PBXTargetDependency */,
+			);
+			name = NetworkingTests;
+			productName = NetworkingTests;
+			productReference = 5F0E93B92542AC6D0086E45F /* NetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5F0E937B253CB59F0086E45F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					5F0E9383253CB59F0086E45F = {
 						CreatedOnToolsVersion = 12.0.1;
 						LastSwiftMigration = 1200;
+					};
+					5F0E93B82542AC6D0086E45F = {
+						CreatedOnToolsVersion = 12.0.1;
 					};
 				};
 			};
@@ -152,12 +214,20 @@
 			projectRoot = "";
 			targets = (
 				5F0E9383253CB59F0086E45F /* Networking */,
+				5F0E93B82542AC6D0086E45F /* NetworkingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5F0E9382253CB59F0086E45F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F0E93B72542AC6D0086E45F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,7 +252,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F0E93B52542AC6D0086E45F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6F5D232544426A00FF9D03 /* StarWarsAPI.swift in Sources */,
+				5F0E93C72542ACAE0086E45F /* MockLoader.swift in Sources */,
+				5F0E93BC2542AC6D0086E45F /* StarWarsAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F0E93C02542AC6D0086E45F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F0E9383253CB59F0086E45F /* Networking */;
+			targetProxy = 5F0E93BF2542AC6D0086E45F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5F0E938A253CB59F0086E45F /* Debug */ = {
@@ -358,6 +446,44 @@
 			};
 			name = Release;
 		};
+		5F0E93C12542AC6D0086E45F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E5R687DQHZ;
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goranpavlovic.NetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F0E93C22542AC6D0086E45F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E5R687DQHZ;
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goranpavlovic.NetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -375,6 +501,15 @@
 			buildConfigurations = (
 				5F0E938D253CB59F0086E45F /* Debug */,
 				5F0E938E253CB59F0086E45F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F0E93C32542AC6D0086E45F /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F0E93C12542AC6D0086E45F /* Debug */,
+				5F0E93C22542AC6D0086E45F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -15,8 +15,7 @@ extension URLSession: HTTPLoading {
             let error = HTTPError(
                 code: .couldntBuildUrl,
                 request: request,
-                response: nil,
-                underlyingError: nil
+                response: nil
             )
             completion(.failure(error))
             return
@@ -45,8 +44,7 @@ extension URLSession: HTTPLoading {
                 let httpError = HTTPError(
                     code: .invalidBodySerialization,
                     request: request,
-                    response: nil,
-                    underlyingError: nil
+                    response: nil
                 )
                 completion(.failure(httpError))
                 return
