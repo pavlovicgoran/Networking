@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import Networking
+@testable import PGNetworking
 
 public class MockLoader: HTTPLoader {
     public typealias HTTPHandler = (HTTPResult) -> Void

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import Networking
+@testable import PGNetworking
 
 extension ServerEnvironment {
     static let production = ServerEnvironment(host: StarWarsAPI.Constants.host, pathPrefix: StarWarsAPI.Constants.apiPrefix)
