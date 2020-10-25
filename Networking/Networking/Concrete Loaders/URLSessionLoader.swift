@@ -89,7 +89,10 @@ extension HTTPResult {
 
         } else if let response = httpResponse {
             // not an error, and an HTTPURLResponse
-            #warning("Allow custom specific logic, since now http codes 505, 404 are resulting in successful case")
+            
+            // Codes like 500, 400, 404 are all resulting in the success
+            // This is left so the consumer can implement the custom specific logic
+            // when receive this code and the response
             self = .success(response)
 
         } else {
