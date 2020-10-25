@@ -16,6 +16,7 @@ public struct HTTPRequest {
     public var method: HTTPMethod = .get
     public var headers: [String: String] = [:]
     public var body: HTTPBody = EmptyBody()
+    public var authenticationMethod = AuthenticationMethod.none
     
     public init() {
         urlComponents.scheme = Constants.https
@@ -40,5 +41,10 @@ public extension HTTPRequest {
     
     var url: URL? {
         urlComponents.url
+    }
+    
+    var queryItems: [URLQueryItem]? {
+        get { urlComponents.queryItems }
+        set { urlComponents.queryItems = newValue }
     }
 }

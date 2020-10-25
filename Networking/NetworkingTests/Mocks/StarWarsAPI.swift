@@ -16,18 +16,32 @@ public class StarWarsAPI {
     enum Constants {
         static let host = "swapi.dev"
         static let apiPrefix = "/api"
+        static let apiKey = "api_key"
     }
     private let loader: HTTPLoader
     
     init(loader: HTTPLoader) {
         let productionLoader = EnvironmentLoader(environment: .production)
         
-        self.loader = productionLoader --> loader ?? loader
+        let authenticator = AuthenticationLoader { request in
+            var requestCopy = request
+            switch request.authenticationMethod {
+                case .apiKey:
+                    let item = URLQueryItem(name: Constants.apiKey, value: "SUPER_SECRET")
+                    requestCopy.queryItems = [item]
+                    return requestCopy
+                default:
+                    return request
+            }
+        }
+        let composite = productionLoader --> authenticator --> loader
+        self.loader = composite ?? loader
     }
     
     public func requestPeople(completion: @escaping (Result<Character, HTTPError>) -> Void) {
         var request = HTTPRequest()
         request.path = "people"
+        request.authenticationMethod = .apiKey
         
         loader.load(request: request) { result in
             switch result {
