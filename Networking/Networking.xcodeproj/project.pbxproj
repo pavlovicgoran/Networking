@@ -22,11 +22,13 @@
 		5F6F5D232544426A00FF9D03 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */; };
 		5F6F5D31254471D600FF9D03 /* PrintLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D30254471D600FF9D03 /* PrintLoader.swift */; };
 		5F6F5D37254472C500FF9D03 /* LoaderOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D36254472C500FF9D03 /* LoaderOperator.swift */; };
-		5F6F5D3B2544740C00FF9D03 /* LoaderChainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */; };
+		5F6F5D3B2544740C00FF9D03 /* LoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D3A2544740C00FF9D03 /* LoaderTests.swift */; };
 		5F6F5D4E25448F8900FF9D03 /* ServerEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D4D25448F8900FF9D03 /* ServerEnvironment.swift */; };
 		5F6F5D522544910000FF9D03 /* EnvironmentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D512544910000FF9D03 /* EnvironmentLoader.swift */; };
 		5F6F5D5A254551D700FF9D03 /* HTTPRequestAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D59254551D700FF9D03 /* HTTPRequestAuthentication.swift */; };
 		5F6F5D5E2545539A00FF9D03 /* AuthenticationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D5D2545539A00FF9D03 /* AuthenticationLoader.swift */; };
+		5F6F5D6C2545675000FF9D03 /* RetryingLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D6B2545675000FF9D03 /* RetryingLoader.swift */; };
+		5F6F5D7025456C8B00FF9D03 /* CitiesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D6F25456C8B00FF9D03 /* CitiesAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +60,13 @@
 		5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
 		5F6F5D30254471D600FF9D03 /* PrintLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintLoader.swift; sourceTree = "<group>"; };
 		5F6F5D36254472C500FF9D03 /* LoaderOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderOperator.swift; sourceTree = "<group>"; };
-		5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderChainingTests.swift; sourceTree = "<group>"; };
+		5F6F5D3A2544740C00FF9D03 /* LoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderTests.swift; sourceTree = "<group>"; };
 		5F6F5D4D25448F8900FF9D03 /* ServerEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEnvironment.swift; sourceTree = "<group>"; };
 		5F6F5D512544910000FF9D03 /* EnvironmentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLoader.swift; sourceTree = "<group>"; };
 		5F6F5D59254551D700FF9D03 /* HTTPRequestAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestAuthentication.swift; sourceTree = "<group>"; };
 		5F6F5D5D2545539A00FF9D03 /* AuthenticationLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoader.swift; sourceTree = "<group>"; };
+		5F6F5D6B2545675000FF9D03 /* RetryingLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryingLoader.swift; sourceTree = "<group>"; };
+		5F6F5D6F25456C8B00FF9D03 /* CitiesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 				5F6F5D30254471D600FF9D03 /* PrintLoader.swift */,
 				5F6F5D512544910000FF9D03 /* EnvironmentLoader.swift */,
 				5F6F5D5D2545539A00FF9D03 /* AuthenticationLoader.swift */,
+				5F6F5D6B2545675000FF9D03 /* RetryingLoader.swift */,
 			);
 			path = "Concrete Loaders";
 			sourceTree = "<group>";
@@ -163,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				5F0E93BB2542AC6D0086E45F /* StarWarsAPITests.swift */,
-				5F6F5D3A2544740C00FF9D03 /* LoaderChainingTests.swift */,
+				5F6F5D3A2544740C00FF9D03 /* LoaderTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			children = (
 				5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */,
 				5F0E93C62542ACAE0086E45F /* MockLoader.swift */,
+				5F6F5D6F25456C8B00FF9D03 /* CitiesAPI.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 				5F0E939B253CC0A10086E45F /* HTTPResponse.swift in Sources */,
 				5F6F5D5A254551D700FF9D03 /* HTTPRequestAuthentication.swift in Sources */,
 				5F0E93A1253CC2C80086E45F /* HTTPResult.swift in Sources */,
+				5F6F5D6C2545675000FF9D03 /* RetryingLoader.swift in Sources */,
 				5F6F5D5E2545539A00FF9D03 /* AuthenticationLoader.swift in Sources */,
 				5F0E93AC254298D10086E45F /* HTTPLoader.swift in Sources */,
 				5F0E9395253CB9010086E45F /* HTTPMethod.swift in Sources */,
@@ -310,7 +317,8 @@
 				5F6F5D232544426A00FF9D03 /* StarWarsAPI.swift in Sources */,
 				5F0E93C72542ACAE0086E45F /* MockLoader.swift in Sources */,
 				5F0E93BC2542AC6D0086E45F /* StarWarsAPITests.swift in Sources */,
-				5F6F5D3B2544740C00FF9D03 /* LoaderChainingTests.swift in Sources */,
+				5F6F5D7025456C8B00FF9D03 /* CitiesAPI.swift in Sources */,
+				5F6F5D3B2544740C00FF9D03 /* LoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
