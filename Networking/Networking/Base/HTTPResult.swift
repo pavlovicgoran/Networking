@@ -35,6 +35,7 @@ public struct HTTPError: Error {
         case badRequest         // api returned 400
         case notFound           // api returned 404
         case internalServerError    // api returned 500
+        case retryCountExceeded // exceeded retry cound of the api
         case unknown            // we have no idea what the problem is
     }
     
