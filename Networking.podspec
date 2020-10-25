@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/pavlovicgoran/Networking.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "Networking/**/*.{swift}"
+  spec.exclude_files = "Networking/NetworkingTests/**/*.{swift,h,m}"
 
   spec.swift_version = "5.0"
 
