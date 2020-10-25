@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Networking
+@testable import PGNetworking
 
 class StarWarsAPITests: XCTestCase {
     let mock = MockLoader()

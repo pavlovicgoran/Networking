@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Networking
+@testable import PGNetworking
 
 public class LoaderChainingTests: XCTestCase {
     let mock = MockLoader()

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import Networking
+@testable import PGNetworking
 
 // Mock class to test RetryingLoader Logic
 public class CitiesAPI {
