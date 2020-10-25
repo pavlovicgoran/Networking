@@ -17,7 +17,7 @@
 		5F0E93AC254298D10086E45F /* HTTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93AB254298D10086E45F /* HTTPLoader.swift */; };
 		5F0E93B025429A1A0086E45F /* URLSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93AF25429A1A0086E45F /* URLSessionLoader.swift */; };
 		5F0E93BC2542AC6D0086E45F /* StarWarsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93BB2542AC6D0086E45F /* StarWarsAPITests.swift */; };
-		5F0E93BE2542AC6D0086E45F /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0E9384253CB59F0086E45F /* Networking.framework */; };
+		5F0E93BE2542AC6D0086E45F /* PGNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0E9384253CB59F0086E45F /* PGNetworking.framework */; };
 		5F0E93C72542ACAE0086E45F /* MockLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E93C62542ACAE0086E45F /* MockLoader.swift */; };
 		5F6F5D232544426A00FF9D03 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */; };
 		5F6F5D31254471D600FF9D03 /* PrintLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D30254471D600FF9D03 /* PrintLoader.swift */; };
@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5F0E9384253CB59F0086E45F /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F0E9384253CB59F0086E45F /* PGNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PGNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0E9387253CB59F0086E45F /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		5F0E9388253CB59F0086E45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F0E9394253CB9010086E45F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		5F0E93A3253CC4CC0086E45F /* HTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBody.swift; sourceTree = "<group>"; };
 		5F0E93AB254298D10086E45F /* HTTPLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLoader.swift; sourceTree = "<group>"; };
 		5F0E93AF25429A1A0086E45F /* URLSessionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionLoader.swift; sourceTree = "<group>"; };
-		5F0E93B92542AC6D0086E45F /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F0E93B92542AC6D0086E45F /* PGNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0E93BB2542AC6D0086E45F /* StarWarsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPITests.swift; sourceTree = "<group>"; };
 		5F0E93BD2542AC6D0086E45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F0E93C62542ACAE0086E45F /* MockLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoader.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F0E93BE2542AC6D0086E45F /* Networking.framework in Frameworks */,
+				5F0E93BE2542AC6D0086E45F /* PGNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 		5F0E9385253CB59F0086E45F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F0E9384253CB59F0086E45F /* Networking.framework */,
-				5F0E93B92542AC6D0086E45F /* NetworkingTests.xctest */,
+				5F0E9384253CB59F0086E45F /* PGNetworking.framework */,
+				5F0E93B92542AC6D0086E45F /* PGNetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,9 +197,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5F0E9383253CB59F0086E45F /* Networking */ = {
+		5F0E9383253CB59F0086E45F /* PGNetworking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F0E938C253CB59F0086E45F /* Build configuration list for PBXNativeTarget "Networking" */;
+			buildConfigurationList = 5F0E938C253CB59F0086E45F /* Build configuration list for PBXNativeTarget "PGNetworking" */;
 			buildPhases = (
 				5F0E937F253CB59F0086E45F /* Headers */,
 				5F0E9380253CB59F0086E45F /* Sources */,
@@ -210,14 +210,14 @@
 			);
 			dependencies = (
 			);
-			name = Networking;
+			name = PGNetworking;
 			productName = Networking;
-			productReference = 5F0E9384253CB59F0086E45F /* Networking.framework */;
+			productReference = 5F0E9384253CB59F0086E45F /* PGNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5F0E93B82542AC6D0086E45F /* NetworkingTests */ = {
+		5F0E93B82542AC6D0086E45F /* PGNetworkingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F0E93C32542AC6D0086E45F /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
+			buildConfigurationList = 5F0E93C32542AC6D0086E45F /* Build configuration list for PBXNativeTarget "PGNetworkingTests" */;
 			buildPhases = (
 				5F0E93B52542AC6D0086E45F /* Sources */,
 				5F0E93B62542AC6D0086E45F /* Frameworks */,
@@ -228,9 +228,9 @@
 			dependencies = (
 				5F0E93C02542AC6D0086E45F /* PBXTargetDependency */,
 			);
-			name = NetworkingTests;
+			name = PGNetworkingTests;
 			productName = NetworkingTests;
-			productReference = 5F0E93B92542AC6D0086E45F /* NetworkingTests.xctest */;
+			productReference = 5F0E93B92542AC6D0086E45F /* PGNetworkingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -251,7 +251,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5F0E937E253CB59F0086E45F /* Build configuration list for PBXProject "Networking" */;
+			buildConfigurationList = 5F0E937E253CB59F0086E45F /* Build configuration list for PBXProject "PGNetworking" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -264,8 +264,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5F0E9383253CB59F0086E45F /* Networking */,
-				5F0E93B82542AC6D0086E45F /* NetworkingTests */,
+				5F0E9383253CB59F0086E45F /* PGNetworking */,
+				5F0E93B82542AC6D0086E45F /* PGNetworkingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,7 +327,7 @@
 /* Begin PBXTargetDependency section */
 		5F0E93C02542AC6D0086E45F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5F0E9383253CB59F0086E45F /* Networking */;
+			target = 5F0E9383253CB59F0086E45F /* PGNetworking */;
 			targetProxy = 5F0E93BF2542AC6D0086E45F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -547,7 +547,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5F0E937E253CB59F0086E45F /* Build configuration list for PBXProject "Networking" */ = {
+		5F0E937E253CB59F0086E45F /* Build configuration list for PBXProject "PGNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F0E938A253CB59F0086E45F /* Debug */,
@@ -556,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F0E938C253CB59F0086E45F /* Build configuration list for PBXNativeTarget "Networking" */ = {
+		5F0E938C253CB59F0086E45F /* Build configuration list for PBXNativeTarget "PGNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F0E938D253CB59F0086E45F /* Debug */,
@@ -565,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F0E93C32542AC6D0086E45F /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
+		5F0E93C32542AC6D0086E45F /* Build configuration list for PBXNativeTarget "PGNetworkingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F0E93C12542AC6D0086E45F /* Debug */,
