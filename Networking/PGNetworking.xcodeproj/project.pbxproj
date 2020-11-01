@@ -29,6 +29,10 @@
 		5F6F5D5E2545539A00FF9D03 /* AuthenticationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D5D2545539A00FF9D03 /* AuthenticationLoader.swift */; };
 		5F6F5D6C2545675000FF9D03 /* RetryingLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D6B2545675000FF9D03 /* RetryingLoader.swift */; };
 		5F6F5D7025456C8B00FF9D03 /* CitiesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5D6F25456C8B00FF9D03 /* CitiesAPI.swift */; };
+		5F74F9C8254E843F00DEA375 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74F9C7254E843F00DEA375 /* Reachability.swift */; };
+		5F74F9CC254E84A600DEA375 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74F9CB254E84A600DEA375 /* NetworkManager.swift */; };
+		5F74F9D0254E8B4300DEA375 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74F9CF254E8B4300DEA375 /* NetworkReachability.swift */; };
+		5F74F9D4254E903000DEA375 /* MockConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74F9D3254E903000DEA375 /* MockConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		5F6F5D5D2545539A00FF9D03 /* AuthenticationLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoader.swift; sourceTree = "<group>"; };
 		5F6F5D6B2545675000FF9D03 /* RetryingLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryingLoader.swift; sourceTree = "<group>"; };
 		5F6F5D6F25456C8B00FF9D03 /* CitiesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesAPI.swift; sourceTree = "<group>"; };
+		5F74F9C7254E843F00DEA375 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		5F74F9CB254E84A600DEA375 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5F74F9CF254E8B4300DEA375 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		5F74F9D3254E903000DEA375 /* MockConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 		5F0E9386253CB59F0086E45F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				5F74F9C6254E842700DEA375 /* Reachability */,
 				5F6F5D4225447FB400FF9D03 /* Concrete Loaders */,
 				5F0E93AE254299BF0086E45F /* Loader Protocol */,
 				5F0E9393253CB8DD0086E45F /* Base */,
@@ -179,8 +188,19 @@
 				5F6F5D222544426A00FF9D03 /* StarWarsAPI.swift */,
 				5F0E93C62542ACAE0086E45F /* MockLoader.swift */,
 				5F6F5D6F25456C8B00FF9D03 /* CitiesAPI.swift */,
+				5F74F9D3254E903000DEA375 /* MockConnection.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5F74F9C6254E842700DEA375 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				5F74F9C7254E843F00DEA375 /* Reachability.swift */,
+				5F74F9CB254E84A600DEA375 /* NetworkManager.swift */,
+				5F74F9CF254E8B4300DEA375 /* NetworkReachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,15 +317,19 @@
 				5F0E93B025429A1A0086E45F /* URLSessionLoader.swift in Sources */,
 				5F6F5D4E25448F8900FF9D03 /* ServerEnvironment.swift in Sources */,
 				5F0E939B253CC0A10086E45F /* HTTPResponse.swift in Sources */,
+				5F74F9D0254E8B4300DEA375 /* NetworkReachability.swift in Sources */,
 				5F6F5D5A254551D700FF9D03 /* HTTPRequestAuthentication.swift in Sources */,
 				5F0E93A1253CC2C80086E45F /* HTTPResult.swift in Sources */,
 				5F6F5D6C2545675000FF9D03 /* RetryingLoader.swift in Sources */,
 				5F6F5D5E2545539A00FF9D03 /* AuthenticationLoader.swift in Sources */,
+				5F74F9D4254E903000DEA375 /* MockConnection.swift in Sources */,
 				5F0E93AC254298D10086E45F /* HTTPLoader.swift in Sources */,
+				5F74F9CC254E84A600DEA375 /* NetworkManager.swift in Sources */,
 				5F0E9395253CB9010086E45F /* HTTPMethod.swift in Sources */,
 				5F0E93A4253CC4CC0086E45F /* HTTPBody.swift in Sources */,
 				5F0E9398253CBB8C0086E45F /* HTTPRequest.swift in Sources */,
 				5F6F5D31254471D600FF9D03 /* PrintLoader.swift in Sources */,
+				5F74F9C8254E843F00DEA375 /* Reachability.swift in Sources */,
 				5F0E939E253CC1520086E45F /* HTTPStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
