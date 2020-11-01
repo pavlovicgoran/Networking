@@ -9,9 +9,14 @@ import Foundation
 
 public class URLSessionLoader: HTTPLoader {
     private let session: URLSession
+    private let networkReachability: NetworkReachability
     
-    public init(session: URLSession = URLSession.shared) {
+    public init(
+        session: URLSession = URLSession.shared,
+        networkReachability: NetworkReachability = NetworkManager.shared
+    ) {
         self.session = session
+        self.networkReachability = networkReachability
     }
     
     #warning("Figure out a way to support canceling tasks")
@@ -20,6 +25,15 @@ public class URLSessionLoader: HTTPLoader {
         guard let url = request.url else {
             let error = HTTPError(
                 code: .couldntBuildUrl,
+                request: request
+            )
+            completion(.failure(error))
+            return
+        }
+        
+        guard networkReachability.isNetConnected else {
+            let error = HTTPError(
+                code: .cannotConnect,
                 request: request
             )
             completion(.failure(error))

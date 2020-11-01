@@ -90,4 +90,23 @@ public class LoaderChainingTests: XCTestCase {
         
         wait(for: [expectation], timeout: 3)
     }
+    
+    func testURLSessionLoaderNoConnection() {
+        let connection = MockConnection(isNetConnected: false, isOnCelular: false, isOnWiFi: false)
+        let loader = URLSessionLoader(networkReachability: connection)
+        let expectation = XCTestExpectation(description: "URL Session Loader should return `.cannotConnect Error`")
+        
+        var request = HTTPRequest()
+        request.host = "swapi.dev"
+        request.path = "/api/people/1"
+        loader.load(request: request) { result in
+            if case let .failure(error) = result,
+               error.code == .cannotConnect {
+                expectation.fulfill()
+            } else {
+                XCTFail("URL Session Loader should return `.cannotConnect Error`, but it fails with other error or HTTPResult.success case")
+            }
+        }
+        wait(for: [expectation], timeout: 1)
+    }
 }
